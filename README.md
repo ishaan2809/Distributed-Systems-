@@ -52,7 +52,7 @@ Ass-1/
 
 2. **Compile all Java source files**:
    ```bash
-   javac -cp "lib/*" src/*.java`
+   javac -cp "lib/*" src/*.java
    ```
 
    This will compile all source files and place the `.class` files in the `src/` directory.
