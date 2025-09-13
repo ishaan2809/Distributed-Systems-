@@ -1,7 +1,7 @@
 Weather Aggregation Server
 ==========================
 
-Purpose 
+Purpose (plain English)
 -----------------------
 This project is a simple, educational client/server system that collects weather data from “content servers” and serves it to “read clients”.
 
@@ -21,7 +21,7 @@ Project layout (what’s inside)
 - `src/GETClient.java`          → reads data from the server and prints it
 - `src/JSONUtils.java`          → helper to parse key:value files to JSON
 - `src/LamportClock.java`       → tiny Lamport clock class used everywhere
-- `src/PersistentStore.java`    → safe, atomic file saving/loading
+- `src/TestRunner.java`         → runs all JUnit tests
 - Tests in `src/*Test.java`     → JUnit tests (run via TestRunner)
 
 How to build (one command)
@@ -99,10 +99,18 @@ We provide a simple TestRunner that invokes JUnit directly.
 
     java -cp ".;out;lib/*" TestRunner
 
-You’ll see a detailed pass/fail report for:
+You'll see a detailed pass/fail report for:
 - Lamport clock logic
 - JSON parsing and client failure handling
 - Server functionality, error codes, concurrency
+
+**Expected Results**: All 11 tests should pass, demonstrating:
+- ✅ Thread-safe Lamport clock operations
+- ✅ Proper JSON parsing and validation
+- ✅ HTTP protocol compliance (201/200/204/400/500 status codes)
+- ✅ Concurrent PUT operations from multiple clients
+- ✅ Data persistence and recovery
+- ✅ Error handling for various failure scenarios
 
 Troubleshooting (common problems)
 ---------------------------------
