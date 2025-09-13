@@ -1,7 +1,7 @@
 Weather Aggregation Server
 ==========================
 
-Purpose (plain English)
+Purpose 
 -----------------------
 This project is a simple, educational client/server system that collects weather data from “content servers” and serves it to “read clients”.
 
